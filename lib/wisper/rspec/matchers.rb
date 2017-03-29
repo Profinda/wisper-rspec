@@ -3,6 +3,8 @@ require 'rspec/expectations'
 module Wisper
   module RSpec
     class EventRecorder
+      alias_method :id, :object_id
+
       def initialize
         @broadcast_events = []
       end
